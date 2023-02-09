@@ -165,34 +165,13 @@
         <div>
             <p>FAQ</p>
             <div>
-                <details>
-                    <summary>Hoe print je een document vanaf je laptop bij de HZ?</summary>
-                    <p class="textfaq">Document naar printer sturen, daarna pasje scannen en uit printen.</p>
-                </details>
-                <details>
-                    <summary>Hoe scan je een document en stuur je het naar je laptop bij de HZ?</summary>
-                    <p class="textfaq">scan je pasje leg je papieren op de printer een stuur het dan naar de persoon waar je het wilt hebben.</p>
-                </details>
-                <details>
-                    <summary>Hoe kan ik iets kopen op de HZ webshop?</summary>
-                    <p class="textfaq">Je logt in met je HZ account, gaat naar webshop en zoekt het product wat je wilt hebben en betaald.</p>
-                </details>
-                <details>
-                    <summary>Je logt in met je HZ Waar kan ik de laatste instructies vinden over wat te doen als je ziek bent / symptomen van COVID vertoont?
-                    </summary>
-                    <p class="textfaq">Op het rijksoverheid</p>
-                </details>
-                <details>
-                    <summary>Hoe boek je een projectruimte in een van de vleugels?</summary>
-                    <p class="textfaq">Ga naar hz boeken pagina en via daar kan je een ruimte boeken</p>
-                </details>
-                <details>
-                    <summary>Wat zijn de instructies als u uw auto wilt parkeren op de HZ-parkeerplaats?u</summary>
-                    <p class="textfaq">Bij het pand zijn acht parkeerplaatsen: twee invalideplaatsen en plekken voor HZ-auto’s.<br>
-                        Je eigen auto kun je parkeren in de parkeergarage aan de Kousteensedijk 3 (tussen de Rechtbank en de
-                        Bibliotheek).<br>
-                        Op vertoon van de inrijkaart krijg je bij de HZ-receptie gratis een uitrijkaart.</p>
-                </details>
+                @foreach($faqs as $faq)
+                    <details>
+                    <summary>
+                        {{ $faq->question }}</summary> <p>{{$faq->answer }}</p>
+                        </details>
+                    @endforeach
+
             </div>
         </div>
         <img id="hzmiddelburg" src="./image/hzmiddelburg.jpg" alt="hzmiddelburg">

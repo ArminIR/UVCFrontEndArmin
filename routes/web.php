@@ -5,6 +5,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\FaqController;
+use App\Http\Controllers\PostsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -47,5 +48,6 @@ Route::get('/faq.blade.php', [FaqController::class, 'show']);
 
 Route::get('/blog.blade.php', [BlogController::class, 'show']);
 
+Route::get('/posts/{post}', [PostsController::class, 'show']);
 
 
