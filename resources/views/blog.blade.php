@@ -5,19 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>home</title>
+    <title>Dashboard</title>
 </head>
 
-<body background="./image/grijzeachtergrond.jpg" id="achtergrondHome">
+<body background="./image/grijzeachtergrond.jpg" id="achtergrondBlog">
 <div class="sidenav">
     <ul>
-        <li><a href="#home" class="active">
+        <li><a href="./">
                 <div class="tooltip"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
                                           preserveAspectRatio="xMidYMid meet" viewBox="0 0 1024 1024">
                         <path fill="currentColor"
                               d="M946.5 505L560.1 118.8l-25.9-25.9a31.5 31.5 0 0 0-44.4 0L77.5 505a63.9 63.9 0 0 0-18.8 46c.4 35.2 29.7 63.3 64.9 63.3h42.5V940h691.8V614.3h43.4c17.1 0 33.2-6.7 45.3-18.8a63.6 63.6 0 0 0 18.7-45.3c0-17-6.7-33.1-18.8-45.2zM568 868H456V664h112v204zm217.9-325.7V868H632V640c0-22.1-17.9-40-40-40H432c-22.1 0-40 17.9-40 40v228H238.1V542.3h-96l370-369.7l23.1 23.1L882 542.3h-96.1z" />
                     </svg>
-                    <div class="tool">home</div>
+                    <div class="tool">Home</div>
             </a></li>
         <li><a href="./profile.blade.php">
                 <div class="tooltip"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
@@ -48,13 +48,13 @@
                     </svg>
                     <div class="tool">FAQ</div>
             </a></li>
-        <li><a href="./blog.blade.php">
+        <li><a href="#blog" class="active">
                 <div class="tooltip"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
                                           preserveAspectRatio="xMidYMid meet" viewBox="0 0 20 20">
                         <path fill="currentColor"
                               d="m16.89 1.2l1.41 1.41c.39.39.39 1.02 0 1.41L14 8.33V18H3V3h10.67l1.8-1.8c.4-.39 1.03-.4 1.42 0zm-5.66 8.48l5.37-5.36l-1.42-1.42l-5.36 5.37l-.71 2.12z" />
                     </svg>
-                    <div class="tool">blog</div>
+                    <div class="tool">Blog</div>
             </a></li>
         <li><a
                 href="https://hz.nl/uploads/documents/1.4-Over-de-HZ/1.4.3.-Regelingen-en-documenten/NL/5.-Onderwijs-examenregelingen/Onderwijs-en-examenregeling/OER-HZ-Bacheloropleiding-voltijd-2022-2023-DEF-13-juni.pdf">
@@ -162,21 +162,50 @@
             </a></li>
     </ul>
 </div>
-<h1>Home</h1>
-<p>Ik denk dat deze studie bij mij past,<br>
-    omdat ik in mijn omgeving veel mensen ken die ook ict doen en van wat ik heb gezien
-    leek dat mij heel interessant.<br>
-    Ik ben ook graag met computers bezig, daarom heb ik voor deze studie gekozen.</p>
-<div>
-    <img id="setup" src="./image/unnamed.jpg" alt="Setup">
-    <img id="foto" src=".//image/coding-in-the-classroom.avif" alt="coding">
-</div>
-<p>Mijn motvatie voor deze studie is vooral om geld te gaan verdienen later, zodat ik mijn gezin goed kan onderhouden.<br>
-    En om mijn ouders trots te maken.<br>
-    Ik denk dat het bij mij past, omdat ik ook graag bezig ben met computers en wil weten hoe iets in elkaar zit.</p>
+<h1>Blog</h1>
+<h4>MOTIVEER JE STUDIEKEUZE</h4>
+<p>Waarom ik voor deze studie heb gekozen is,
+    omdat ik graag met computer bezig ben.<br>
+    Ik werk graag met andere, maar ik kan het ook alleen en ik zie dat deze school die mogelijkheden geeft.<br>
+    En ik vind de studie zelf ook leuk,<br>
+    want ik ken ook iemand die hetzelfde doet met programmeren en dat vond ik interessant</p>
+<h4>NA HET VOLTOOIEN VAN DE OPLEIDING</h4>
+<p>Een eigen bedrijf beginnen het liefst, omdat ik graag voor mezelf werk en niet elke dag naar een baas moet
+    luisteren.<br>
+    over vier jaar hoop ik geleerdt te hebben om zelf ook wat beter te plannen,<br>
+    maar ook de dingen te leren die ik verwacht van deze studie.</p>
+<h4>BIJBAAN EN VRIJE TIJD</h4>
+<p>Ik werk bij Délifrance. In mijn vrije tijd doe ik karate en game ik graag.<br>
+    Als ik dit moet combineren met studeren dan maak ik daar eerst tijd voor vrij.</p>
+<h4>SWOT-Analyse</h4>
+<p><strong>Doorzettingsvermogen:</strong> en goed naar andere luisteren.</p>
+<p><strong>Zwakheden:</strong> Niet altijd even goed vooruit plannen.</p>
+<p><strong>Kansen:</strong> Om mezelf te ontwikkelen.</p>
+<p><strong>Risico's:</strong> Dat ik soms misschien te weinig tijd zal hebben om dingen af te krijgen.</p>
+<h4>Programmeerervaring</h4>
+<p>Voordat ik ben begonnen met de opleiding had ik weinig/geen ervaring met programmeren</p>
+<h4>Feedback</h4>
+<p>Welkom bij HZ ICT, goed om te lezen dat je graag met computers bezig bent. Wat precies doe je dan? en waarom vind
+    je dat zo leuk?<br>
+    We doen veel in projecten dus dat samenwerken komt dan goed van pas.<br>
+    Plannen ga je zeker nodig hebben op het HBO dus ik kan je aanraden vanaf de start een planner/tool te gebruiken
+    hiervoor.<br>
+    Als risico geef je aan dat je soms te weinig tijd krijgt om een en ander af te kunnen maken. Dat kan zeker
+    voorkomen.<br>
+    Belangrijk wordt om te leren keuzes te maken en te bepalen wanneer goed, goed genoeg is.<br>
+    Mooi dat je een eigen bedrijf wilt beginnen. Heb je al een idee in wat precies en hoe je dat ziet?<br>
+    Er zijn ook werkgevers waar je veel vrijheid krijgt.<br>
+    Succes met je examen en hoop je te zien bij een van onze informatie sessies</p>
+<h4>Antwoord feedback</h4>
+<p>Wat ik precies doe is gamen en ik vind dat leuk, omdat ik er veel plezier in maak met vrienden.<br>
+    Hoe mijn eigen bedrijf er ongeveer uit komt te zien weet ik nog niet precies.
+</p>
+<a class="center"
+   href="https://werkenbijdefensie.nl/inspiratiegebieden/verover-het-digitale-domein?gclid=Cj0KCQjwy5maBhDdARIsAMxrkw0M5-TMvxRVqO6L-G1drz7aHXCudv9t-fhA0gy1pVl63OejVnH7fKcaAuSHEALw_wcB">ICT
+    field of work</a>
 <link rel="stylesheet" href="./css/styling.css">
-<link rel="stylesheet" href="./css/svg.css">
 <link rel="stylesheet" href="./css/kleur.css">
+<link rel="stylesheet" href="./css/svg.css">
 </body>
 
 </html>

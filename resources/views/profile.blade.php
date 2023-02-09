@@ -5,21 +5,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>home</title>
+    <title>Profile</title>
 </head>
 
-<body background="./image/grijzeachtergrond.jpg" id="achtergrondHome">
+<body background="./image/grijzeachtergrond.jpg" id="achtergrondProfile">
 <div class="sidenav">
     <ul>
-        <li><a href="#home" class="active">
+        <li><a href="./">
                 <div class="tooltip"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
                                           preserveAspectRatio="xMidYMid meet" viewBox="0 0 1024 1024">
                         <path fill="currentColor"
                               d="M946.5 505L560.1 118.8l-25.9-25.9a31.5 31.5 0 0 0-44.4 0L77.5 505a63.9 63.9 0 0 0-18.8 46c.4 35.2 29.7 63.3 64.9 63.3h42.5V940h691.8V614.3h43.4c17.1 0 33.2-6.7 45.3-18.8a63.6 63.6 0 0 0 18.7-45.3c0-17-6.7-33.1-18.8-45.2zM568 868H456V664h112v204zm217.9-325.7V868H632V640c0-22.1-17.9-40-40-40H432c-22.1 0-40 17.9-40 40v228H238.1V542.3h-96l370-369.7l23.1 23.1L882 542.3h-96.1z" />
                     </svg>
-                    <div class="tool">home</div>
+                    <div class="tool">Home</div>
             </a></li>
-        <li><a href="./profile.blade.php">
+        <li><a href="#profile" class="active">
                 <div class="tooltip"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
                                           preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
                         <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5">
@@ -27,7 +27,7 @@
                             <path d="M4.271 18.346S6.5 15.5 12 15.5s7.73 2.846 7.73 2.846M12 12a3 3 0 1 0 0-6a3 3 0 0 0 0 6Z" />
                         </g>
                     </svg>
-                    <div class="tool">profile</div>
+                    <div class="tool">Profile</div>
             </a></li>
         <li><a href="./dashboard.blade.php">
                 <div class="tooltip"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
@@ -40,7 +40,7 @@
                     </svg>
                     <div class="tool">dashboard</div>
             </a></li>
-        <li><a href="./faq.blade.php">
+        <li><a href="./faq.html">
                 <div class="tooltip"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
                                           preserveAspectRatio="xMidYMid meet" viewBox="0 0 26 26">
                         <path fill="currentColor"
@@ -162,18 +162,19 @@
             </a></li>
     </ul>
 </div>
-<h1>Home</h1>
-<p>Ik denk dat deze studie bij mij past,<br>
-    omdat ik in mijn omgeving veel mensen ken die ook ict doen en van wat ik heb gezien
-    leek dat mij heel interessant.<br>
-    Ik ben ook graag met computers bezig, daarom heb ik voor deze studie gekozen.</p>
+<h1>Profiel</h1>
+<h2>Persoonlijke gegevens</h2>
+<p>Naam: <em>Armin Elshout</em></p>
+<p>Leeftijd: <em>17 jaar</em></p>
+<p>Woonplaats: <em>Bergen op Zoom</em></p>
+<p>Hobbies: <em>Karate en gamen</em></p>
+<p>Favoriete film: <em>Marvel films</em></p>
+<p>Vooropleiding: <em>Havo N/G</em></p>
 <div>
-    <img id="setup" src="./image/unnamed.jpg" alt="Setup">
-    <img id="foto" src=".//image/coding-in-the-classroom.avif" alt="coding">
+    <img id="mezelf" src="./image/ikzelf.jpg" alt="ik">
+    <img id="ikAuto" src="./image/autofoto.jpg" alt="ik in de auto">
 </div>
-<p>Mijn motvatie voor deze studie is vooral om geld te gaan verdienen later, zodat ik mijn gezin goed kan onderhouden.<br>
-    En om mijn ouders trots te maken.<br>
-    Ik denk dat het bij mij past, omdat ik ook graag bezig ben met computers en wil weten hoe iets in elkaar zit.</p>
+<link rel="stylesheet" href="./css/style.css">
 <link rel="stylesheet" href="./css/styling.css">
 <link rel="stylesheet" href="./css/svg.css">
 <link rel="stylesheet" href="./css/kleur.css">

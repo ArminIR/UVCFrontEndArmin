@@ -1,7 +1,11 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\WelcomeController;
+use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\BlogController;
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\FaqController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -32,4 +36,16 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
 Route::get('/', [WelcomeController::class, 'show']);
+
+Route::get('/profile.blade.php', [ProfileController::class, 'show']);
+
+Route::get('/dashboard.blade.php', [DashboardController::class, 'show']);
+
+Route::get('/faq.blade.php', [FaqController::class, 'show']);
+
+Route::get('/blog.blade.php', [BlogController::class, 'show']);
+
+
+
