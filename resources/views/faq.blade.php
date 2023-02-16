@@ -9,8 +9,11 @@
                     <summary>
                         {{ $faq->question }}</summary> <p>{{$faq->answer }}<br> <a href="{{$faq->link}}" class="white-link">{{$faq->link}}</a></p>
                         </details>
-                    @endforeach
-
+                @endforeach
+                    <form method="GET" action="/faq/create">
+                        @csrf
+                        <p><input type="submit" value="Add Faq"></p>
+                    </form>
             </div>
         </div>
         <img id="hzmiddelburg" src="./image/hzmiddelburg.jpg" alt="hzmiddelburg">

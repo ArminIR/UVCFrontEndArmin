@@ -45,11 +45,21 @@ Route::get('/profile', [ProfileController::class, 'show']);
 
 Route::get('/dashboard', [DashboardController::class, 'show']);
 
-Route::get('/faq', [FaqController::class, 'show']);
+Route::get('/faq', [FaqController::class, 'index']);
+
+Route::post('/faq', [FaqController::class, 'store']);
+
+Route::get('/faq/create', [FaqController::class, 'create']);
+
+Route::get('/faq/{faq}', [FaqController::class, 'show']);
 
 Route::get('/blog', [BlogController::class, 'show']);
 
 Route::get('/posts/{post}', [PostController::class, 'show']);
+
+Route::post('/blog', [ArticlesController::class, 'store']);
+
+Route::get('/blog/create', [ArticlesController::class, 'create']);
 
 Route::get('/blog/{article}', [ArticlesController::class, 'show']);
 

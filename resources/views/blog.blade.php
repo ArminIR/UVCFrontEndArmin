@@ -7,6 +7,10 @@
         <p><a href="/blog/{{$article->id}}" class="white-link">{{$article->excerpt}}</a></p>
     @endforeach
 
+    <form method="GET" action="/faq/create">
+        @csrf
+        <p><input type="submit" value="Add blog"></p>
+    </form>
     <p><a class="white-link"
        href="https://werkenbijdefensie.nl/inspiratiegebieden/verover-het-digitale-domein?gclid=Cj0KCQjwy5maBhDdARIsAMxrkw0M5-TMvxRVqO6L-G1drz7aHXCudv9t-fhA0gy1pVl63OejVnH7fKcaAuSHEALw_wcB">ICT
         field of work</a></p>
