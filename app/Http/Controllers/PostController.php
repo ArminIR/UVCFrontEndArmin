@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 use App\Models\Post;
 
-class PostsController extends Controller
+class PostController extends Controller
 {
     public function show($slug): string {
 

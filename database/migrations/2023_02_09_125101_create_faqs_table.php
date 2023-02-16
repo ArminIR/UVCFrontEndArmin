@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('faqs', function (Blueprint $table) {
-            $table->id('bigIncrements');
+            $table->id();
             $table->string('question');
             $table->string('answer');
             $table->string('link')->nullable();
