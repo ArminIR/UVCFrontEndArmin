@@ -7,7 +7,7 @@
         <p><a href="/blog/{{$article->id}}" class="white-link">{{$article->excerpt}}</a></p>
     @endforeach
 
-    <form method="GET" action="/faq/create">
+    <form method="GET" action="/blog/create">
         @csrf
         <p><input type="submit" value="Add blog"></p>
     </form>

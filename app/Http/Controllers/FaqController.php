@@ -40,18 +40,32 @@ class FaqController
         return redirect('/faq');
     }
 
-    public function edit()
+    public function edit($id)
     {
-        //Show a view to edit an existing resource
+        $faq = Faq::find($id);
+
+        return view('faqs.edit', compact('faq'));
     }
 
-    public function update()
+    public function update($id)
     {
-        //Persist the edit resource
+        $faq = Faq::find($id);
+
+        $faq->question = request('question');
+        $faq->answer = request('answer');
+        $faq->link = request('link');
+
+        $faq->save();
+
+        return redirect('/faq/' . $faq->id);
     }
 
-    public function destroy()
+    public function destroy($id)
     {
-        //Delete the resource
+        $faq = Faq::find($id);
+
+        $faq->delete();
+
+        return redirect('/faq/');
     }
 }

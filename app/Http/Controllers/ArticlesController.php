@@ -7,6 +7,13 @@ use Illuminate\View\View;
 
 class ArticlesController
 {
+    public function index()
+    {
+       return view('blog', [
+        'articles' => Article::all()
+    ]);
+
+    }
     public function show($id): View
     {
         $article = Article::find($id);
@@ -31,18 +38,32 @@ class ArticlesController
         return redirect('/blog');
     }
 
-    public function edit()
+    public function edit($id)
     {
+        $article = Article::find($id);
 
+        return view('articles.edit', compact('article'));
     }
 
-    public function update()
+    public function update($id)
     {
+        $article = Article::find($id);
 
+        $article->title = request('title');
+        $article->excerpt = request('excerpt');
+        $article->body = request('body');
+
+        $article->save();
+
+        return redirect('/blog/' . $article->id);
     }
 
-    public function destroy()
+    public function destroy($id)
     {
+        $article = Article::find($id);
 
+        $article->delete();
+
+        return redirect('/blog/');
     }
 }

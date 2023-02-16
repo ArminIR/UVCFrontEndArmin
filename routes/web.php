@@ -7,6 +7,7 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\FaqController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\ArticlesController;
+use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -45,22 +46,27 @@ Route::get('/profile', [ProfileController::class, 'show']);
 
 Route::get('/dashboard', [DashboardController::class, 'show']);
 
-Route::get('/faq', [FaqController::class, 'index']);
+//Route::get('/faq', [FaqController::class, 'index']);
+//Route::post('/faq', [FaqController::class, 'store']);
+//Route::get('/faq/create', [FaqController::class, 'create']);
+//Route::get('/faq/{faq}', [FaqController::class, 'show']);
+//Route::get('/faq/{faq}/edit', [FaqController::class, 'edit']);
+//Route::put('/faq/{faq}', [FaqController::class, 'update']);
+//Route::delete('/faq/{faq}', [FaqController::class, 'destroy']);
 
-Route::post('/faq', [FaqController::class, 'store']);
-
-Route::get('/faq/create', [FaqController::class, 'create']);
-
-Route::get('/faq/{faq}', [FaqController::class, 'show']);
-
-Route::get('/blog', [BlogController::class, 'show']);
+//Route::get('/blog', [BlogController::class, 'show']);
 
 Route::get('/posts/{post}', [PostController::class, 'show']);
 
-Route::post('/blog', [ArticlesController::class, 'store']);
+//Route::post('/blog', [ArticlesController::class, 'store']);
+//Route::get('/blog/create', [ArticlesController::class, 'create']);
+//Route::get('/blog/{article}', [ArticlesController::class, 'show']);
+//Route::get('/blog/{article}/edit', [ArticlesController::class, 'edit']);
+//Route::put('/blog/{article}', [ArticlesController::class, 'update']);
+//Route::delete('/blog/{article}', [ArticlesController::class, 'destroy']);
 
-Route::get('/blog/create', [ArticlesController::class, 'create']);
-
-Route::get('/blog/{article}', [ArticlesController::class, 'show']);
-
+Route::resources([
+    'faq' => FaqController::class,
+    'blog' => ArticlesController::class,
+]);
 

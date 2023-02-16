@@ -3,14 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\Models\Article;
+use Illuminate\View\View;
 
 class BlogController
 {
-    public function show(): string
+    public function show(): View
     {
-        return view('blog', [
-            'articles' => Article::take(7)->get()
-        ]);
-
+        return view('blog');
     }
 }
