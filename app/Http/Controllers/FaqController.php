@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Faq;
+use Illuminate\Http\Request;
 use Illuminate\View\View;
 
 class FaqController
@@ -16,10 +17,10 @@ class FaqController
 
     }
 
-    public function show($id): View
+    public function show(Faq $faq): View
     {
         return view('faqs', [
-            'faq' => Faq::find($id)
+            'faq' => Faq::find($faq)
         ]);
     }
     public function create()
@@ -27,45 +28,38 @@ class FaqController
         return view('faqs.create');
     }
 
-    public function store()
+    public function store(Request $request)
     {
-        $faq = new Faq();
+        Faq::create($this->validateFaq($request));
 
-        $faq->answer = request('answer');
-        $faq->question = request('question');
-        $faq->link = request('link');
-
-        $faq->save();
-
-        return redirect('/faq');
+        return redirect('/faqs');
     }
 
-    public function edit($id)
+    public function edit(Faq $faq)
     {
-        $faq = Faq::find($id);
-
-        return view('faqs.edit', compact('faq'));
+        return view('faqs.edit', ['faq' => $faq]);
     }
 
-    public function update($id)
+    public function update(Request $request, Faq $faq)
     {
-        $faq = Faq::find($id);
+       $faq->update($this->validateFaq($request));
 
-        $faq->question = request('question');
-        $faq->answer = request('answer');
-        $faq->link = request('link');
-
-        $faq->save();
-
-        return redirect('/faq/' . $faq->id);
+        return redirect('/faqs/' . $faq->id);
     }
 
-    public function destroy($id)
+    public function destroy(Faq $faq)
     {
-        $faq = Faq::find($id);
-
         $faq->delete();
 
-        return redirect('/faq/');
+        return redirect('/faqs/');
+    }
+
+    protected function validateFaq(Request $request)
+    {
+        return $request->validate([
+            'question' => 'required',
+            'answer' => 'required',
+            'link' => 'nullable'
+        ]);
     }
 }

@@ -4,20 +4,20 @@ namespace App\Http\Controllers;
 
 use App\Models\Article;
 use Illuminate\View\View;
+use Illuminate\Http\Request;
 
 class ArticlesController
 {
     public function index()
     {
-       return view('blog', [
-        'articles' => Article::all()
-    ]);
+        return view('blog', [
+            'articles' => Article::all()
+        ]);
 
     }
-    public function show($id): View
+    public function show(Article $blog): View
     {
-        $article = Article::find($id);
-        return view ('articles.show', ['article' =>$article]);
+        return view ('articles.show', ['article' =>$blog]);
     }
 
     public function create()
@@ -25,45 +25,41 @@ class ArticlesController
         return view('articles.create');
     }
 
-    public function store()
+    public function store(Request $request)
     {
-        $article = new Article();
 
-        $article->title = request('title');
-        $article->excerpt = request('excerpt');
-        $article->body = request('body');
+        Article::create($this->validateArticle($request));
 
-        $article->save();
-
-        return redirect('/blog');
+        return redirect('/blogs');
     }
 
-    public function edit($id)
+    public function edit(Article $blog)
     {
-        $article = Article::find($id);
-
-        return view('articles.edit', compact('article'));
+        return view('articles.edit',
+            ['blog' => $blog]);
     }
 
-    public function update($id)
+    public function update(Request $request, Article $blog)
     {
-        $article = Article::find($id);
+        $blog->update($this->validateArticle($request));
 
-        $article->title = request('title');
-        $article->excerpt = request('excerpt');
-        $article->body = request('body');
-
-        $article->save();
-
-        return redirect('/blog/' . $article->id);
+        return redirect('/blogs/' . $blog->id);
     }
 
-    public function destroy($id)
+    public function destroy(Article $blog)
     {
-        $article = Article::find($id);
 
-        $article->delete();
+        $blog->delete();
 
-        return redirect('/blog/');
+        return redirect('/blogs/');
+    }
+
+    protected function validateArticle(Request $request)
+    {
+        return $request->validate([
+            'title' => 'required',
+            'excerpt' => 'required',
+            'body' => 'required'
+        ]);
     }
 }

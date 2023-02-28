@@ -66,7 +66,7 @@ Route::get('/posts/{post}', [PostController::class, 'show']);
 //Route::delete('/blog/{article}', [ArticlesController::class, 'destroy']);
 
 Route::resources([
-    'faq' => FaqController::class,
-    'blog' => ArticlesController::class,
+    'faqs' => FaqController::class,
+    'blogs' => ArticlesController::class,
 ]);
 

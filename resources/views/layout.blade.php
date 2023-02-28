@@ -40,7 +40,7 @@
                     </svg>
                     <div class="tool">dashboard</div>
             </a></li>
-        <li><a href="/faq" class="{{ Request::path() === 'faq' ? 'active' : ''}}">
+        <li><a href="{{route('faqs.index')}}" class="{{ Request::path() === 'faqs' ? 'active' : ''}}">
                 <div class="tooltip"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
                                           preserveAspectRatio="xMidYMid meet" viewBox="0 0 26 26">
                         <path fill="currentColor"
@@ -48,7 +48,7 @@
                     </svg>
                     <div class="tool">FAQ</div>
             </a></li>
-        <li><a href="/blog" class="{{ Request::path() === 'blog' ? 'active' : ''}}">
+        <li><a href="{{route('blogs.index')}}" class="{{ Request::path() === 'blogs' ? 'active' : ''}}">
                 <div class="tooltip"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
                                           preserveAspectRatio="xMidYMid meet" viewBox="0 0 20 20">
                         <path fill="currentColor"

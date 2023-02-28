@@ -4,10 +4,10 @@
     <h1>Blog</h1>
     @foreach($articles as $article)
         <h4>{{$article->title}}</h4>
-        <p><a href="/blog/{{$article->id}}" class="white-link">{{$article->excerpt}}</a></p>
+        <p><a href="{{route('blogs.show', $article->id)}}" class="white-link">{{$article->excerpt}}</a></p>
     @endforeach
 
-    <form method="GET" action="/blog/create">
+    <form method="GET" action="{{route('blogs.create',  $article->id)}}">
         @csrf
         <p><input type="submit" value="Add blog"></p>
     </form>
