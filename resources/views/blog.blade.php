@@ -1,7 +1,7 @@
 @extends('layout')
 
 @section('content')
-    <h1>Blog</h1>
+    <h1>Blogs</h1>
     @foreach($articles as $article)
         <h4>{{$article->title}}</h4>
         <p><a href="{{route('blogs.show', $article->id)}}" class="white-link">{{$article->excerpt}}</a></p>
