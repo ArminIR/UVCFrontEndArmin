@@ -1,7 +1,7 @@
 @extends ('layout')
 
 @section ('content')
-<h1 class="dashtitle">Welkom op mijn studiemonitor!</h1>
+<h1 class="dashtitle">Welkom op mijn studiemonitor!!!</h1>
 <div id="tabelMidden">
 
     <table class="tabel">
