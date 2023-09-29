@@ -8,6 +8,7 @@ use App\Http\Controllers\FaqController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\ArticlesController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\GradesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -46,6 +47,10 @@ Route::get('/profile', [ProfileController::class, 'show']);
 
 Route::get('/dashboard', [DashboardController::class, 'show']);
 
+Route::get('/grades', [GradesController::class, 'index']);
+
+Route::get('/grades/{grade}', [GradesController::class, 'show']);
+
 //Route::get('/faq', [FaqController::class, 'index']);
 //Route::post('/faq', [FaqController::class, 'store']);
 //Route::get('/faq/create', [FaqController::class, 'create']);
@@ -57,7 +62,6 @@ Route::get('/dashboard', [DashboardController::class, 'show']);
 //Route::get('/blog', [BlogController::class, 'show']);
 
 Route::get('/posts/{post}', [PostController::class, 'show']);
-
 //Route::post('/blog', [ArticlesController::class, 'store']);
 //Route::get('/blog/create', [ArticlesController::class, 'create']);
 //Route::get('/blog/{article}', [ArticlesController::class, 'show']);
@@ -68,5 +72,17 @@ Route::get('/posts/{post}', [PostController::class, 'show']);
 Route::resources([
     'faqs' => FaqController::class,
     'blogs' => ArticlesController::class,
+    'grades' => GradesController::class
 ]);
 
+Route::get('/404', function () {
+    return view('404');
+});
+
+Route::get('/500', function () {
+    return view('500');
+});
+
+Route::get('/apitest', function () {
+    return view('apitest');
+});

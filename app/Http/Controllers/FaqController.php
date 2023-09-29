@@ -20,7 +20,7 @@ class FaqController
     public function show(Faq $faq): View
     {
         return view('faqs', [
-            'faq' => Faq::find($faq)
+            'faq' => $faq
         ]);
     }
     public function create()
@@ -32,12 +32,14 @@ class FaqController
     {
         Faq::create($this->validateFaq($request));
 
-        return redirect('/faqs');
+        return redirect('/faqs')->with('success', 'Faq is succesvol toegevoegd.');
     }
 
     public function edit(Faq $faq)
     {
-        return view('faqs.edit', ['faq' => $faq]);
+        return view('faqs.edit', [
+            'faq' => $faq
+        ]);
     }
 
     public function update(Request $request, Faq $faq)
@@ -59,7 +61,7 @@ class FaqController
         return $request->validate([
             'question' => 'required',
             'answer' => 'required',
-            'link' => 'nullable'
+            'link' => 'nullable|active_url'
         ]);
     }
 }
