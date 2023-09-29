@@ -13,10 +13,10 @@
         </tr>
         @foreach($grades as $grade)
             <tr>
-        <td> {{ $grade -> course_name }} </td>
-        <td> {{ $grade -> test_name }} </td>
-        <td> {{ $grade -> EC }} </td>
-        <td> {{ $grade -> best_grade }} </td>
+                <td> {{ $grade -> course_name }} </td>
+                <td> {{ $grade -> test_name }} </td>
+                <td> {{ $grade -> ec }} </td>
+                <td> {{ $grade -> best_grade }} </td>
             </tr>
         @endforeach
 
@@ -104,6 +104,6 @@
 </div>
 <div class="center">
     <h3>NBSA</h3>
-    <progress value = "{{ $grade -> EC }}" max = "60">
+    <progress value = "{{ $grade -> ec }}" max = "60">
 </div>
 @endsection

@@ -13,4 +13,6 @@
     <p>Mijn motivatie voor deze studie is vooral om geld te gaan verdienen later, zodat ik mijn gezin goed kan onderhouden.<br>
         En om mijn ouders trots te maken.<br>
         Ik denk dat het bij mij past, omdat ik ook graag bezig ben met computers en wil weten hoe iets in elkaar zit.</p>
+
+    <div id="activityContainer"></div>
 @endsection
