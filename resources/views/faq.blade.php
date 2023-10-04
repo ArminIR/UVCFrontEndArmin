@@ -2,7 +2,7 @@
 @section ('content')
     <main>
         <div>
-            <p>FAQ</p>
+            <p>FAQQ</p>
             <div>
                 @foreach($faqs as $faq)
                     <details>
