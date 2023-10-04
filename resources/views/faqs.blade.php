@@ -5,7 +5,7 @@
     <main>
 
         <div>
-            <p>FAQ</p>
+            <p>FAQ ja</p>
             <div>
 
                     <details>
