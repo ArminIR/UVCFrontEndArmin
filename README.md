@@ -1,38 +1,15 @@
-# create-svelte
+Testing:
+Edit recipe te dicht bij de rand,
+Button om het add recipe maken,
+Plaatje naast recepten,
+Alleen recipe tekst dik gedrukt maar niet de recept naam
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+Figma design: https://www.figma.com/proto/HSmfE1p5bBwy6MOJQfxdJ9/Prototype-Add-Recipe?type=design&node-id=1-2&t=Domo9Wmg1v6zfTcU-1&scaling=min-zoom&page-id=0%3A1&starting-point-node-id=1%3A2&mode=design
 
-## Creating a project
+ERD: ![image](https://github.com/ArminIR/UVCFrontEndArmin/assets/112845529/75d91c83-0180-4507-9bf1-9232b36680a5)
 
-If you're seeing this, you've probably already done this step. Congrats!
+USE CASE: ![image](https://github.com/ArminIR/UVCFrontEndArmin/assets/112845529/ce8703c8-fb96-444d-b686-1f05251ac758)
+![image](https://github.com/ArminIR/UVCFrontEndArmin/assets/112845529/da0173c4-98dd-42d4-b47f-aad552c220f6)
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
 
-# create a new project in my-app
-npm create svelte@latest my-app
-```
 
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
