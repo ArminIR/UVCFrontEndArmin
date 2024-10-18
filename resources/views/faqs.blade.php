@@ -6,6 +6,7 @@
 
         <div>
             <p>FAQ ja</p>
+            <p>FAQ ja</p>
             <div>
 
                     <details>
