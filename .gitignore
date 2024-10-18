@@ -149,7 +149,3 @@ modules.xml
 .idea/sonarlint
 
 # End of https://www.toptal.com/developers/gitignore/api/laravel,phpstorm+all,macos
-.exe
-a.exe
-b.exe
-c.exe
